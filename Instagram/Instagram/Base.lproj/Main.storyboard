@@ -102,6 +102,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="caption" destination="6lr-l5-3bA" id="eQp-BV-jUa"/>
+                                            <outlet property="postView" destination="aA0-0G-QfZ" id="eRa-Ho-KAc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

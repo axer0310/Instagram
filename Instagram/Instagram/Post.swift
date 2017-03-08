@@ -10,6 +10,15 @@ import UIKit
 import Parse
 class Post: NSObject
 {
+    var image: UIImage?
+    var caption: String?
+    
+//    init(post: PFObject)
+//    {
+//        image = post[""]
+//    }
+//    
+    
     /**
      * Other methods
      */
@@ -24,9 +33,9 @@ class Post: NSObject
     class func postUserImage(image: UIImage?, withCaption caption: String?, withCompletion completion: PFBooleanResultBlock?) {
         // Create Parse object PFObject
         let post = PFObject(className: "Post")
-        
+        var jpegImage = UIImageJPEGRepresentation(image!, 1.0)
         // Add relevant fields to the object
-        post["media"] = getPFFileFromImage(image: image) // PFFile column type
+        post["media"] = PFFile(data: jpegImage!) // PFFile column type
         post["author"] = PFUser.current() // Pointer column type that points to PFUser
         post["caption"] = caption
         post["likesCount"] = 0

@@ -78,7 +78,6 @@ class UploadingPhotosViewController: UIViewController, UIImagePickerControllerDe
     }
     
     
-    
     /*
     // MARK: - Navigation
 
